@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>うきゃうきゃ</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+    body{
+      font-family: HG創英角ﾎﾟｯﾌﾟ体;
+      background:grey;
+    }
+
+    .box{
+      margin:auto;
+      margin-top:200px;
+      margin-bottom:200px;
+      text-align: center;
+    }
+    
+    #ryuunen{
+      font-size: 500px;
+      /*animation: tColor 5s infinite;*/
+      /*-webkit-animation: tColor gra 5s infinite;*/
+    }
+
+    @keyframes tColor{
+      0% {color: red;}
+      15%{color: yellow;}
+      30%{color: green;}
+      45%{color:lightblue;}
+      60%{color: blue;}
+      75%{color: purple;}
+      90%{color:pink;}
+      100% {color: red;}
+    }
+
+    @-webkit-keyframes tColor{
+      0% {color: red;}
+      15%{color: yellow;}
+      30%{color: green;}
+      45%{color:lightblue;}
+      60%{color: blue;}
+      75%{color: purple;}
+      90%{color:pink;}
+      100% {color: red;}
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <span id="ryuunen">留年</div>
+    </div>
+    <div class="box" id="links">
+      <a href="/tanni">単位キャッチャー</a>
+      <a href="/flappy-tcu-bird">FlappyTCUBird</a>
+    </div>
+
+    <script>
+    hue = 0;
+    $(function(){
+      setInterval(function(){
+        r = $('#ryuunen').css('color','hsl(' + hue + ',50%,50%)');
+        hue += 3;
+        //console.log('hsl(' + hue + ',50%,50%)');
+      },100);
+    })
+    </script>
+  </body>
+</html>
